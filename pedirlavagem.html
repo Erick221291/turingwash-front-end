@@ -3,72 +3,95 @@
 
 <head>
   <title>Pedir lavagem</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="https://ituring.com.br/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
-    main {
-      background: #eaf7ff;
+    html, body, main{
+     height: 100%;
+    }
+    body{
+      margin: 0;
+      font-family: "Poppins, Courier, sans-serif";
+    }
+    .div-container{
+      background-color: #EAF7FF;
+    }
+    /*header*/
+    .header{
+      background-color: #bcf7ff;
+      display: flex;
+      align-items: center;
+      justify-content:space-between;
+      padding: 8px 32px 8px 32px;
+      font-size: 14px;
+    }
+    .header__logo{
+     padding: 8px 100px 8px 5px;
+    }
+    .header__sair{
+      background-color: #8ff2ff;
+      border-radius: 4px;
+      border-color:#8ff2ff ;
+      font-size: 21px;   
+    }
+    .header__carros{
+      font-size: 21px;
+
+    }
+    .header__lavagens{
+      font-size: 21px;
+
+    }
+    .main-content{
+      background-color: #EAF7FF;
     }
 
-    header {
-      background: #bef7fe;
-    }
-
-    footer {
-      background: #bef7fe;
-    }
-    #sair{
-      background:#bef7fe ;
-      border-radius: 5px;
-      border-color: #bef7fe;
-      position: absolute;
-      top: 50px;
-      right: 10px;
-    }	
-    .lavadores{
-      text-align: center;
-    }
   </style>
   <script></script>
 </head>
-
 <body>
-  <main>
-    <header>
-      <img src="logo TuringWash.png" alt="contorno de um carro frase embaixo turing wash">
-      <nav>Meus carros</nav>
-      <nav>Minhas lavagens</nav>
-      <button id="sair">sair</button>
+  <div class="div-container">
+    <header class="header">
+      <img src="./img/logo TuringWash.png" alt="contorno de um carro frase embaixo turing wash" class="header__logo">
+      <a class="header__carros">Meus carros</a>
+      <a class="header__lavagens">Minhas lavagens</a>
+      <button class="header__sair">sair</button>
     </header>
-    <section>
-      <div>
-        <h2 class="lavadores">Lavadores disponíveis próximos de vocês...</h2>
-      </div>
-      <div>
-        <nav>lavar Nissan kicks</nav>
-        <nav>Ordenar por próximidade</nav>
-      </div>
-      <!--Cards lavadores-->
-      <div>
-
-      </div>
-    </section>
+    <main class="main-content">
+      <section>
+        <div>
+          <h2 class="lavadores">Lavadores disponíveis próximos de vocês...</h2>
+        </div>
+        <div>
+          <a>lavar Nissan kicks</a>
+          <a>Ordenar por próximidade</a>
+        </div>
+        <!--Cards lavadores-->
+        <article>
+  
+        </article>
+      </section>
+    </main>
     <footer>
-      <div>
-        <img src="logo TuringWash.png" alt="contorno de um carro frase embaixo turing wash">
-      </div>
-      <div>
-        <nav>Sobre</nav>
-        <nav>FAQ</nav>
-        <nav>Contato</nav>
-        <nav>Termos de uso</nav>
-      </div>
-      <div>
+      <section>
+        <img src="./img/logo TuringWash.png" alt="contorno de um carro frase embaixo turing wash">
+      </section>
+      <section>
+        <a>Sobre</a>
+        <a>FAQ</a>
+        <a>Contato</a>
+        <a>Termos de uso</a>
+      </section>
+      <section>
         <a href="" title="@turingwash">@turingwash</a>
         <hr />
         <span>2022 TuringWash. Todos os direitos reservados.</span>
-      </div>
+      </section>
     </footer>
-  </main>
-
+  </div>
 </body>
 
 </html>
