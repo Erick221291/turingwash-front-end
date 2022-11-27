@@ -34,21 +34,27 @@
       }
 
       #top-header__nav {
-        gap: 6.5rem;
+        gap: 6rem;
+        font-family: 'Inter', sans-serif;
       }
 
       #top-header__nav a {
-        font-family: 'Inter', sans-serif;
         font-size: 20px;
         font-weight: bold;
         text-decoration: none;
         color: #000;
       }
 
-      #sair {
-        background: #bef7fe;
+      #top-header__nav_exitBtn {
+        cursor: pointer;
+        background-color: #8ff2ff;
+        border: none;
+        margin-right: 2rem;
+        width: 80px;
+        height: 40px;
         border-radius: 5px;
-        border-color: #a8eaf3;
+        font-size: 20px;
+        font-weight: bold;
       }
 
       #secPrincipal {
@@ -98,7 +104,7 @@
         <nav id="top-header__nav">
           <a href="#">Meus carros</a>
           <a href="#">Minhas lavagens</a>
-          <button id="sair">sair</button>
+          <button id="top-header__nav_exitBtn">Sair</button>
         </nav>
       </header>
       <section id="secPrincipal">
@@ -118,7 +124,7 @@
       <footer>
         <div>
           <img
-            src="logo TuringWash.png"
+            src="./images/turingwash-logo.svg"
             alt="contorno de um carro frase embaixo turing wash"
           />
         </div>
