@@ -5,21 +5,44 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Meus carros</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap"
+      rel="stylesheet"
+    />
     <style>
       main {
         background: #eaf7ff;
-      }
-
-      header {
-        background: #bef7fe;
       }
 
       footer {
         background: #bef7fe;
       }
 
-      #logo {
-        display: inline;
+      #top-header {
+        background: #bcf7ff;
+        height: 5.5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      #top-header__logo {
+        margin: 2px 15px 11px 20px;
+        width: 100px;
+      }
+
+      #top-header__nav {
+        gap: 6.5rem;
+      }
+
+      #top-header__nav a {
+        font-family: 'Inter', sans-serif;
+        font-size: 20px;
+        font-weight: bold;
+        text-decoration: none;
+        color: #000;
       }
 
       #sair {
@@ -66,15 +89,15 @@
   </head>
   <body>
     <main>
-      <header>
+      <header id="top-header">
         <img
-          id="logo"
-          src="logo TuringWash.png"
+          id="top-header__logo"
+          src="./images/turingwash-logo.svg"
           alt="contorno de um carro frase embaixo turing wash"
         />
-        <nav>
-          <h3>Meus carros</h3>
-          <h3>Minhas lavagens</h3>
+        <nav id="top-header__nav">
+          <a href="#">Meus carros</a>
+          <a href="#">Minhas lavagens</a>
           <button id="sair">sair</button>
         </nav>
       </header>
