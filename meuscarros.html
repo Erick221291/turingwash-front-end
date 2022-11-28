@@ -12,6 +12,10 @@
       rel="stylesheet"
     />
     <style>
+      * {
+        box-sizing: border-box;
+        font-family: 'Inter', sans-serif;
+      }
       main {
         background: #eaf7ff;
       }
@@ -91,6 +95,58 @@
         justify-content: flex-end;
         align-items: center;
       }
+
+      #bottom-footer {
+        background: #bcf7ff;
+        height: 12rem;
+        font-size: 14px;
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem;
+      }
+
+      #bottom-footer__logo img {
+        margin: 5px 0 0 1rem;
+        height: 4rem;
+      }
+
+      #bottom-footer__links {
+        margin: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        line-height: 1.5rem;
+      }
+
+      #bottom-footer__links a {
+        color: #000;
+        text-decoration: none;
+      }
+
+      #bottom-footer__copyright {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: flex-end;
+        line-height: 3px;
+      }
+
+      #bottom-footer__copyright img {
+        width: 22px;
+        margin-right: 8px;
+      }
+
+      #bottom-footer__copyright__instagram {
+        display: flex;
+        align-items: center;
+      }
+
+      #bottom-footer__copyright__instagram_phrase {
+        font-size: 1rem;
+      }
+
+      #bottom-footer__copyright_phrase {
+        font-size: 12px;
+      }
     </style>
   </head>
   <body>
@@ -121,23 +177,24 @@
           <button id="adicar">adicionar carro</button>
         </div>
       </section>
-      <footer>
-        <div>
-          <img
-            src="./images/turingwash-logo.svg"
-            alt="contorno de um carro frase embaixo turing wash"
-          />
+      <footer id="bottom-footer">
+        <div id="bottom-footer__logo">
+          <img src="./images/turingwash-logo.svg" alt="logo TuringWash" />
         </div>
-        <div>
-          <nav>Sobre</nav>
-          <nav>FAQ</nav>
-          <nav>Contato</nav>
-          <nav>Termos de uso</nav>
+        <div id="bottom-footer__links">
+          <a href="#">Sobre</a>
+          <a href="#">FAQ</a>
+          <a href="#">Contato</a>
+          <a href="#">Termos de uso</a>
         </div>
-        <div>
-          <a href="" title="@turingwash">@turingwash</a>
-          <hr />
-          <span>2022 TuringWash. Todos os direitos reservados.</span>
+        <div id="bottom-footer__copyright">
+          <div id="bottom-footer__copyright__instagram">
+            <img src="./images/Ins_icon.png" alt="Instagram logo" />
+            <p id="bottom-footer__copyright__instagram_phrase">@turingwash</p>
+          </div>
+          <p id="bottom-footer__copyright_phrase">
+            2022. TuringWash. Todos os direitos reservados&copy;
+          </p>
         </div>
       </footer>
     </main>
