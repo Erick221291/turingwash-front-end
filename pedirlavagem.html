@@ -4,7 +4,7 @@
 <head>
   <title>Pedir lavagem</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="https://ituring.com.br/favicon.ico" />
+    <link rel="icon" href="./img/turingwash-icon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
@@ -17,7 +17,7 @@
       font-family: "Poppins, Courier, sans-serif";
     }
     .div-container{
-      background-color: #EAF7FF;
+      background-color: #EAF7FF; 
     }
     /*header*/
     .header{
@@ -28,6 +28,12 @@
       padding: 8px 32px 8px 32px;
       font-size: 14px;
     }
+    .header__nav {
+      display: flex;
+      align-items: center;
+      color: #000;
+      gap: 6rem;
+}
     .header__logo{
      padding: 8px 100px 8px 5px;
     }
@@ -45,51 +51,131 @@
       font-size: 21px;
 
     }
+    /*Main*/
     .main-content{
       background-color: #EAF7FF;
     }
+    /*footer*/
+    .footer {
+      background: #bcf7ff;
+      margin-top: auto;
+      height: 12rem;
+      font-size: 14px;
+      display: flex;
+      justify-content: space-between;
+      padding: 1rem;
+    }
+    .footer__imgLogo {
+     margin: 5px 0 0 1rem;
+     height: 4rem;
+    }
+    .footer__links{
+      margin: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      line-height: 1.5rem;
+    }
+    .footer__links a {
+      color: #000;
+      text-decoration: none;
+    }
+    .footer__copy{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: flex-end;
+      line-height: 3px;
+    }
+    .footer__copyInsta{
+      display: flex;
+      align-items: center;
 
+    }
+    .footer__copyImg{
+      width: 22px;
+      margin-right: 8px;
+    }
+    .footer__copyLinkInsta{
+      font-size: 1rem;
+    }
+    .footer__Copydireitos{
+      margin-top: 12px;
+      font-size: 12px;
+    }
   </style>
   <script></script>
 </head>
 <body>
   <div class="div-container">
     <header class="header">
-      <img src="./img/logo TuringWash.png" alt="contorno de um carro frase embaixo turing wash" class="header__logo">
-      <a class="header__carros">Meus carros</a>
-      <a class="header__lavagens">Minhas lavagens</a>
-      <button class="header__sair">sair</button>
+      <img src="./img/turingwash-logo.svg" alt="contorno de um carro frase embaixo turing wash" class="header__logo">
+      <nav class="haeder__nav">
+        <a  class="header__carros">Meus carros</a>
+        <a  class="header__lavagens">Minhas lavagens</a>
+        <button class="header__sair">sair</button>
+      </nav>
     </header>
     <main class="main-content">
-      <section>
-        <div>
-          <h2 class="lavadores">Lavadores disponíveis próximos de vocês...</h2>
-        </div>
-        <div>
+        <section>
+          <h2 class="main-contente__lavadores">Lavadores disponíveis próximos de vocês...</h2>
+        </section>
+        <section>
           <a>lavar Nissan kicks</a>
           <a>Ordenar por próximidade</a>
-        </div>
+        </section>
         <!--Cards lavadores-->
-        <article>
-  
-        </article>
-      </section>
+        <section>
+          <article>
+            <img src="./img/profile.png" alt="imagem do lavador">
+            <h3>João Pereira</h3>
+            <span>nota 4.5 (998 avaliações)</span>
+            <span>R$80</span>
+            <a>Ver avaliações</a>
+            <button>Lavar meu carro</button>  
+          </article>
+          <article>
+            <img src="./img/profile.png" alt="imagem do lavador">
+            <h3>Joana santos</h3>
+            <span>nota 4.7 (489 avaliações)</span>
+            <span>R$75</span>
+            <a>Ver avaliações</a>
+            <button>Lavar meu carro</button>  
+          </article>
+          <article>
+            <img src="./img/profile.png" alt="imagem do lavador">
+            <h3>Matheus Oliveira</h3>
+            <span>nota 4.3 (783 avaliações)</span>
+            <span>R$90</span>
+            <a>Ver avaliações</a>
+            <button>Lavar meu carro</button>  
+          </article>
+          <article>
+            <img src="./img/profile.png" alt="imagem do lavador">
+            <h3>Pedro Sampaio</h3>
+            <span>nota 4.1 (801 avaliações)</span>
+            <span>R$60</span>
+            <a>Ver avaliações</a>
+            <button>Lavar meu carro</button>  
+          </article>
+        </section>    
     </main>
-    <footer>
-      <section>
-        <img src="./img/logo TuringWash.png" alt="contorno de um carro frase embaixo turing wash">
+    <footer class="footer">
+      <section class="footer__imgLogo">
+        <img src="./img/turingwash-logo.svg" alt="contorno de um carro coma uma  frase embaixo: turing wash">
       </section>
-      <section>
+      <nav class="footer__links">
         <a>Sobre</a>
         <a>FAQ</a>
         <a>Contato</a>
         <a>Termos de uso</a>
-      </section>
-      <section>
-        <a href="" title="@turingwash">@turingwash</a>
-        <hr />
-        <span>2022 TuringWash. Todos os direitos reservados.</span>
-      </section>
+      </nav>
+      <section class="footer__copy">
+        <div class="footer__copyInsta">
+          <img class="footer__copyImg" src="./img/Ins_icon.png" alt="Instagram logo" />
+          <a class="footer__copyLinkInsta" href="#" title="@turingwash">@turingwash</a>
+        </div>
+          <span class="footer__Copydireitos">2022 TuringWash. Todos os direitos reservados.</span>
+      </section> 
     </footer>
   </div>
 </body>
