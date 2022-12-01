@@ -4,148 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap"
-      rel="stylesheet"
-    />
-    <style>
-      * {
-        box-sizing: border-box;
-        font-family: 'Inter', sans-serif;
-      }
-      main {
-        background: #eaf7ff;
-      }
-
-      footer {
-        background: #bef7fe;
-      }
-
-      #top-header {
-        background: #bcf7ff;
-        height: 5.5rem;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-
-      #top-header__logo {
-        margin: 2px 15px 11px 20px;
-        width: 100px;
-      }
-
-      #top-header__nav {
-        gap: 6rem;
-        font-family: 'Inter', sans-serif;
-      }
-
-      #top-header__nav a {
-        font-size: 20px;
-        font-weight: bold;
-        text-decoration: none;
-        color: #000;
-      }
-
-      #top-header__nav_exitBtn {
-        cursor: pointer;
-        background-color: #8ff2ff;
-        border: none;
-        margin-right: 2rem;
-        width: 80px;
-        height: 40px;
-        border-radius: 5px;
-        font-size: 20px;
-        font-weight: bold;
-      }
-
-      #secPrincipal {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-      }
-
-      #box {
-        background: #ffffff;
-        width: 85%;
-        height: 100px;
-        border-radius: 10px;
-        margin: auto;
-      }
-      #exclu {
-        background: #fd9c9d;
-        border-radius: 5px;
-        border-color: #fd9c9d;
-      }
-      #adicar {
-        background: #bef7fe;
-        border-radius: 5px;
-        border-color: #bef7fe;
-      }
-      .mc {
-        text-align: center;
-      }
-      nav {
-        display: flex;
-        gap: 1rem;
-        flex-direction: row;
-        justify-content: flex-end;
-        align-items: center;
-      }
-
-      #bottom-footer {
-        background: #bcf7ff;
-        height: 12rem;
-        font-size: 14px;
-        display: flex;
-        justify-content: space-between;
-        padding: 1rem;
-      }
-
-      #bottom-footer__logo img {
-        margin: 5px 0 0 1rem;
-        height: 4rem;
-      }
-
-      #bottom-footer__links {
-        margin: 1.5rem;
-        display: flex;
-        flex-direction: column;
-        line-height: 1.5rem;
-      }
-
-      #bottom-footer__links a {
-        color: #000;
-        text-decoration: none;
-      }
-
-      #bottom-footer__copyright {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-        justify-content: flex-end;
-        line-height: 3px;
-      }
-
-      #bottom-footer__copyright img {
-        width: 22px;
-        margin-right: 8px;
-      }
-
-      #bottom-footer__copyright__instagram {
-        display: flex;
-        align-items: center;
-      }
-
-      #bottom-footer__copyright__instagram_phrase {
-        font-size: 1rem;
-      }
-
-      #bottom-footer__copyright_phrase {
-        font-size: 12px;
-      }
-    </style>
-    <title>Turing Wash - Pedir Lavagem</title>
+    <link rel="icon" href="https://ituring.com.br/favicon.ico" />
+    <link rel="stylesheet" href="./styles/adicionarcarro_style.css" />
+    <title>Turing Wash - Adicionar Carro</title>
   </head>
   <body>
     <header id="top-header">
@@ -155,37 +16,37 @@
         alt="contorno de um carro frase embaixo turing wash"
       />
       <nav id="top-header__nav">
-        <a href="#">Meus carros</a>
-        <a href="#">Minhas lavagens</a>
-        <button id="top-header__nav_exitBtn">Sair</button>
+        <a href="./meuscarros.html">Meus carros</a>
+        <a href="./minhaslavagens.html">Minhas lavagens</a>
+        <button class="blue-btn">Sair</button>
       </nav>
     </header>
+
     <div class="container">
-      <section id="add-car">
-        <h1>Adicionar carro</h1>
-        <div id="add-car__form">
-          <label for="manufacturer" class="add-car__form__label"
-            >Fabricante</label
-          >
-          <select name="manufacturers" class="add-car__form__selects">
-            <option value="nissan">Nissan</option>
-            <option value="chevrolet">Chevrolet</option>
-          </select>
+      <h2>Adicionar carro</h2>
 
-          <label for="model" class="add-car__form__label">Modelo</label>
-          <select name="manufacturers" class="add-car__form__selects">
-            <option value="nissan">Onix</option>
-            <option value="chevrolet">Kicks</option>
-          </select>
+      <div id="add-car__form">
+        <label for="manufacturer" class="add-car__form__label"
+          >Fabricante</label
+        >
+        <select name="manufacturers" class="add-car__form__selects">
+          <option value="nissan">Nissan</option>
+          <option value="chevrolet">Chevrolet</option>
+        </select>
 
-          <label for="manufacturer" class="add-car__form__label">Ano</label>
-          <select name="manufacturers" class="add-car__form__selects">
-            <option value="nissan">2018</option>
-            <option value="chevrolet">2015</option>
-          </select>
-        </div>
-        <button class="btn-primary">Adicionar carro</button>
-      </section>
+        <label for="model" class="add-car__form__label">Modelo</label>
+        <select name="manufacturers" class="add-car__form__selects">
+          <option value="nissan">Onix</option>
+          <option value="chevrolet">Kicks</option>
+        </select>
+
+        <label for="manufacturer" class="add-car__form__label">Ano</label>
+        <select name="manufacturers" class="add-car__form__selects">
+          <option value="nissan">2018</option>
+          <option value="chevrolet">2015</option>
+        </select>
+      </div>
+      <button class="blue-btn addcar-btn">Adicionar carro</button>
     </div>
 
     <footer id="bottom-footer">
