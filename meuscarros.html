@@ -1,96 +1,91 @@
 <!DOCTYPE html>
-<html lang="pt=br">
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="https://ituring.com.br/favicon.ico" />
+    <link rel="stylesheet" href="./styles/reset.css" />
+    <link rel="stylesheet" href="./styles/meuscarros_style.css" />
+    <title>Turing Wash - Meus Carros</title>
+  </head>
+  <body>
+    <header id="top-header">
+      <nav role="navigation">
+        <div id="menuToggle">
+          <input type="checkbox" />
 
- <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Meus carros</title>
-  <style>
-    main {
-      background: #eaf7ff;
-    }
+          <span></span>
+          <span></span>
+          <span></span>
 
-    header {
-      background: #bef7fe;
-    }
-
-    footer {
-      background: #bef7fe;
-    }
-    #sair{
-      background:#bef7fe ;
-      border-radius: 5px;
-      border-color: #bef7fe;
-      position: absolute;
-      top: 50px;
-      right: 10px;	
-    }
-    #box{
-      background: #ffffff;
-      width: 300px;
-      height: 100px;
-      border-radius: 10px;
-      margin: auto;
-
-    }
-    #exclu{
-      background: #fd9c9d;
-      border-radius: 5px;
-      border-color: #fd9c9d;
-    }
-    #adicar{
-      background: #bef7fe;
-      border-radius: 5px;
-      border-color:#bef7fe ;
-      
-    }
-    .mc{
-      text-align: center;
-    }
-          
-  </style>
- </head>
- <body>
-  <main>
-    <header>
-      <img src="logo TuringWash.png" alt="contorno de um carro frase embaixo turing wash">
-      <nav>Meus carros</nav>
-      <nav>Minhas lavagens</nav>
-      <button id="sair">sair</button>
+          <ul id="menu">
+            <a href="./meuscarros.html"><li>Meus carros</li></a>
+            <a href="./minhaslavagens.html"><li>Minhas lavagens</li></a>
+            <button class="top-header__nav_btn blue-btn">Sair</button>
+          </ul>
+        </div>
+      </nav>
+      <img
+        id="top-header__logo"
+        src="./images/turingwash-logo.svg"
+        alt="contorno de um carro frase embaixo turing wash"
+      />
+      <nav id="top-header__nav">
+        <a href="#">Meus carros</a>
+        <a href="./minhaslavagens.html">Minhas lavagens</a>
+        <button class="top-header__nav_btn blue-btn">Sair</button>
+      </nav>
     </header>
-    <section>
-      <div >
-        <h2 class="mc">Meus carros</h2>
+    <div class="container">
+      <h1>Meus carros</h1>
+
+      <div class="car">
+        <div class="car__name">
+          <p>Nissan Kicks</p>
+          <p>2018</p>
+        </div>
+        <button class="car_exclude">Excluir carro</button>
       </div>
-      <!--card-->
-      <div id="box">
-        <samp>nissan kicks</samp>
-        <p>2018</p>
-        <button id="exclu">excluir carro</button>
+      <div class="car">
+        <div class="car__name">
+          <p>Chevrolet Onix</p>
+          <p>2015</p>
+        </div>
+        <button class="car_exclude">Excluir carro</button>
       </div>
-      <div>
-        <button id="adicar">adicionar carro</button>
+
+      <button id="container__addBtn" class="blue-btn">Adicionar carro</button>
+    </div>
+
+    <footer id="bottom-footer">
+      <div id="bottom-footer__logo">
+        <img src="./images/turingwash-logo.svg" alt="logo TuringWash" />
       </div>
-    </section>
-    <footer>
-      <div>
-        <img src="logo TuringWash.png" alt="contorno de um carro frase embaixo turing wash">
+      <div id="bottom-footer__links">
+        <a href="#">Sobre</a>
+        <a href="#">FAQ</a>
+        <a href="#">Contato</a>
+        <a href="#">Termos de uso</a>
       </div>
-      <div>
-        <nav>Sobre</nav>
-        <nav>FAQ</nav>
-        <nav>Contato</nav>
-        <nav>Termos de uso</nav>
-      </div>
-      <div>
-        <a href="" title="@turingwash">@turingwash</a>
-        <hr />
-        <span>2022 TuringWash. Todos os direitos reservados.</span>
+      <div id="bottom-footer__copyright">
+        <div id="bottom-footer__copyright__instagram">
+          <img src="./images/Ins_icon.png" alt="Instagram logo" />
+          <p id="bottom-footer__copyright__instagram_phrase">@turingwash</p>
+        </div>
+        <p id="bottom-footer__copyright_phrase">
+          2022. TuringWash. Todos os direitos reservados&copy;
+        </p>
       </div>
     </footer>
-  </main>
-
- </body>
-
+    <script src="./scripts/usuario.js"></script>
+    <script>
+      if (!usuario.logado) {
+        const loginBtn = document.getElementsByClassName('top-header__nav_btn');
+        for (let btn of loginBtn) {
+          btn.innerText = 'Entrar';
+        }
+      }
+    </script>
+  </body>
 </html>

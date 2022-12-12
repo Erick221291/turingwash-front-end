@@ -1,0 +1,71 @@
+@import url('./header.css');
+@import url('./footer.css');
+@import url('./reset-body-blue_btn.css');
+@import url('./hamburger_menu.css');
+
+.container {
+  background-color: #eaf7ff;
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+#my-washes {
+  margin-top: 2rem;
+  width: 85%;
+}
+
+.container h1 {
+  margin: 3rem 0 1rem 0;
+  font-size: 1.4rem;
+}
+
+#container__car-distance {
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+}
+
+#my-washes {
+  margin: 2rem 0;
+  width: 85%;
+}
+
+.my-washes__single {
+  background-color: #fff;
+  position: relative;
+  margin: 1rem;
+  height: 120px;
+  display: grid;
+  grid-template-columns: 33% auto;
+  align-content: center;
+  padding: 0 0 12px 18px;
+  border-radius: 10px;
+}
+
+.my-washes__single__name p:last-child {
+  font-weight: bold;
+}
+
+.my-washes__single__car p:last-child {
+  font-weight: bold;
+}
+
+.my-washes__single__price-date p:first-child {
+  background-color: #dcfcfe;
+  font-weight: bold;
+  position: absolute;
+  width: 75px;
+  height: 35px;
+  padding: 9px 10px 5px 12px;
+  top: 0;
+  right: 0;
+}
+
+.my-washes__single__price-date p:last-child {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}

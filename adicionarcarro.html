@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="https://ituring.com.br/favicon.ico" />
+    <link rel="stylesheet" href="./styles/reset.css" />
+    <link rel="stylesheet" href="./styles/adicionarcarro_style.css" />
+    <title>Turing Wash - Adicionar Carro</title>
+  </head>
+  <body>
+    <header id="top-header">
+      <nav role="navigation">
+        <div id="menuToggle">
+          <input type="checkbox" />
+
+          <span></span>
+          <span></span>
+          <span></span>
+
+          <ul id="menu">
+            <a href="./meuscarros.html"><li>Meus carros</li></a>
+            <a href="./minhaslavagens.html"><li>Minhas lavagens</li></a>
+            <button class="top-header__nav_btn blue-btn">Sair</button>
+          </ul>
+        </div>
+      </nav>
+      <img
+        id="top-header__logo"
+        src="./images/turingwash-logo.svg"
+        alt="contorno de um carro frase embaixo turing wash"
+      />
+      <nav id="top-header__nav">
+        <a href="./meuscarros.html">Meus carros</a>
+        <a href="./minhaslavagens.html">Minhas lavagens</a>
+        <button class="top-header__nav_btn blue-btn">Sair</button>
+      </nav>
+    </header>
+
+    <div class="container">
+      <h1>Adicionar carro</h1>
+
+      <div id="add-car__form">
+        <label for="manufacturer" class="add-car__form__label"
+          >Fabricante</label
+        >
+        <select name="manufacturers" class="add-car__form__selects">
+          <option value="nissan">Nissan</option>
+          <option value="chevrolet">Chevrolet</option>
+        </select>
+
+        <label for="model" class="add-car__form__label">Modelo</label>
+        <select name="manufacturers" class="add-car__form__selects">
+          <option value="nissan">Onix</option>
+          <option value="chevrolet">Kicks</option>
+        </select>
+
+        <label for="manufacturer" class="add-car__form__label">Ano</label>
+        <select name="manufacturers" class="add-car__form__selects">
+          <option value="nissan">2018</option>
+          <option value="chevrolet">2015</option>
+        </select>
+      </div>
+      <button class="blue-btn addcar-btn">Adicionar carro</button>
+    </div>
+
+    <footer id="bottom-footer">
+      <div id="bottom-footer__logo">
+        <img src="./images/turingwash-logo.svg" alt="logo TuringWash" />
+      </div>
+      <div id="bottom-footer__links">
+        <a href="#">Sobre</a>
+        <a href="#">FAQ</a>
+        <a href="#">Contato</a>
+        <a href="#">Termos de uso</a>
+      </div>
+      <div id="bottom-footer__copyright">
+        <div id="bottom-footer__copyright__instagram">
+          <img src="./images/Ins_icon.png" alt="Instagram logo" />
+          <p id="bottom-footer__copyright__instagram_phrase">@turingwash</p>
+        </div>
+        <p id="bottom-footer__copyright_phrase">
+          2022. TuringWash. Todos os direitos reservados&copy;
+        </p>
+      </div>
+    </footer>
+    <script src="./scripts/usuario.js"></script>
+    <script>
+      if (!usuario.logado) {
+        const loginBtn = document.getElementsByClassName('top-header__nav_btn');
+        for (let btn of loginBtn) {
+          btn.innerText = 'Entrar';
+        }
+      }
+    </script>
+  </body>
+</html>

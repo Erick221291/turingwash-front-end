@@ -1,0 +1,59 @@
+@import url('./header.css');
+@import url('./footer.css');
+@import url('./reset-body-blue_btn.css');
+@import url('./hamburger_menu.css');
+
+.container {
+  background-color: #eaf7ff;
+  height: 100%;
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.container h1 {
+  margin: 3rem;
+  font-size: 1.4rem;
+}
+
+.car {
+  background-color: #fff;
+  position: relative;
+  width: 80%;
+  height: 120px;
+  border-radius: 10px;
+  margin: 10px 0 10px 0;
+}
+
+.car_exclude {
+  background-color: #ff9b9b;
+  cursor: pointer;
+  border: none;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: 9rem;
+  height: 36px;
+  border-radius: 5px;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.car__name {
+  position: absolute;
+  font-size: 18px;
+  top: 10px;
+  left: 10px;
+}
+
+.car__name :first-child {
+  font-weight: bold;
+}
+
+#container__addBtn {
+  padding: 12px;
+  margin: 1rem 0 3rem 0;
+  font-size: 1rem;
+}

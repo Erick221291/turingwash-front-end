@@ -1,0 +1,54 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap'); */
+@import url('./header.css');
+@import url('./footer.css');
+@import url('./reset-body-blue_btn.css');
+@import url('./hamburger_menu.css');
+
+.container {
+  background-color: #eaf7ff;
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container h1 {
+  margin-top: 3rem;
+  font-size: 1.4rem;
+}
+
+#add-car__form {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  width: 85%;
+  margin: 4rem 0 2rem 0;
+  border-radius: 10px;
+  padding: 25px;
+}
+
+.add-car__form__label {
+  font-weight: bold;
+  margin: 5px;
+}
+
+.add-car__form__selects {
+  background: #fff;
+  border: 1px solid #a8a8a8;
+  padding: 5px;
+  height: 30px;
+  width: 60%;
+  margin: 6px;
+  border-radius: 10px;
+}
+
+.add-car__form__selects:last-child {
+  width: 20%;
+}
+
+.addcar-btn {
+  height: 35px;
+  width: 145px;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
