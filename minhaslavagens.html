@@ -5,12 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="https://ituring.com.br/favicon.ico" />
+    <link rel="stylesheet" href="./styles/reset.css" />
     <link rel="stylesheet" href="./styles/minhaslavagens_style.css" />
 
     <title>Turing Wash - Minhas Lavagens</title>
   </head>
   <body>
     <header id="top-header">
+      <nav role="navigation">
+        <div id="menuToggle">
+          <input type="checkbox" />
+
+          <span></span>
+          <span></span>
+          <span></span>
+
+          <ul id="menu">
+            <a href="./meuscarros.html"><li>Meus carros</li></a>
+            <a href="./minhaslavagens.html"><li>Minhas lavagens</li></a>
+            <button class="top-header__nav_btn blue-btn">Sair</button>
+          </ul>
+        </div>
+      </nav>
       <img
         id="top-header__logo"
         src="./images/turingwash-logo.svg"
@@ -19,11 +35,11 @@
       <nav id="top-header__nav">
         <a href="./meuscarros.html">Meus carros</a>
         <a href="#">Minhas lavagens</a>
-        <button class="blue-btn">Sair</button>
+        <button class="top-header__nav_btn blue-btn">Sair</button>
       </nav>
     </header>
     <div class="container">
-      <h2>Minhas lavagens</h2>
+      <h1>Minhas lavagens</h1>
 
       <section id="my-washes">
         <div class="my-washes__single">
@@ -112,5 +128,14 @@
         </p>
       </div>
     </footer>
+    <script src="./scripts/usuario.js"></script>
+    <script>
+      if (!usuario.logado) {
+        const loginBtn = document.getElementsByClassName('top-header__nav_btn');
+        for (let btn of loginBtn) {
+          btn.innerText = 'Entrar';
+        }
+      }
+    </script>
   </body>
 </html>

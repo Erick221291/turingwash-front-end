@@ -5,33 +5,52 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="https://ituring.com.br/favicon.ico" />
+    <link rel="stylesheet" href="./styles/reset.css" />
     <link rel="stylesheet" href="./styles/pedirlavagem_style.css" />
 
     <title>Turing Wash - Pedir Lavagem</title>
   </head>
   <body>
     <header id="top-header">
+      <nav role="navigation">
+        <div id="menuToggle">
+          <input type="checkbox" />
+
+          <span></span>
+          <span></span>
+          <span></span>
+
+          <ul id="menu">
+            <a href="./meuscarros.html"><li>Meus carros</li></a>
+            <a href="./minhaslavagens.html"><li>Minhas lavagens</li></a>
+            <button class="top-header__nav_btn blue-btn">Sair</button>
+          </ul>
+        </div>
+      </nav>
+
       <img
         id="top-header__logo"
         src="./images/turingwash-logo.svg"
         alt="contorno de um carro frase embaixo turing wash"
       />
+
       <nav id="top-header__nav">
         <a href="./meuscarros.html">Meus carros</a>
         <a href="./minhaslavagens.html">Minhas lavagens</a>
-        <button class="blue-btn">Sair</button>
+        <button class="top-header__nav_btn blue-btn">Sair</button>
       </nav>
     </header>
     <div class="container">
-      <h2>Lavadores disponíveis próximos de você...</h2>
+      <h1>Lavadores disponíveis próximos de você...</h1>
 
       <div id="container__car-distance">
-        <h3>Lavar <a href="#">Nissan Kicks</a></h3>
-        <h3>Ordenar por <a href="#">proximidade</a></h3>
+        <h2>Lavar <a href="#">Nissan Kicks</a></h2>
+        <h2>Ordenar por <a href="#">proximidade</a></h2>
       </div>
 
       <section id="washers">
-        <div class="washers__profiles">
+        <!-- <div class="washers__profiles">
+          <a class="washers__profiles_see-ratings" href="#">Ver avaliações</a>
           <img src="./images/profile.png" alt="profile image" />
           <p class="washers___profiles_name">João Pereira</p>
 
@@ -49,6 +68,7 @@
         </div>
 
         <div class="washers__profiles">
+          <a class="washers__profiles_see-ratings" href="#">Ver avaliações</a>
           <img src="./images/profile.png" alt="profile image" />
           <p class="washers___profiles_name">Joana Santos</p>
 
@@ -66,6 +86,7 @@
         </div>
 
         <div class="washers__profiles">
+          <a class="washers__profiles_see-ratings" href="#">Ver avaliações</a>
           <img src="./images/profile.png" alt="profile image" />
           <p class="washers___profiles_name">Matheus Oliveira</p>
 
@@ -83,6 +104,7 @@
         </div>
 
         <div class="washers__profiles">
+          <a class="washers__profiles_see-ratings" href="#">Ver avaliações</a>
           <img src="./images/profile.png" alt="profile image" />
           <p class="washers___profiles_name">Pedro Sampaio</p>
 
@@ -97,7 +119,7 @@
             <a href="#">Ver avaliações</a>
             <button class="blue-btn wash-btn">Lavar meu Carro</button>
           </div>
-        </div>
+        </div> -->
       </section>
     </div>
     <footer id="bottom-footer">
@@ -120,5 +142,37 @@
         </p>
       </div>
     </footer>
+    <script src="./scripts/usuario.js"></script>
+    <script src="./scripts/lavadores.js"></script>
+    <script>
+      if (!usuario.logado) {
+        const loginBtn = document.getElementsByClassName('top-header__nav_btn');
+        for (let btn of loginBtn) {
+          btn.innerText = 'Entrar';
+        }
+      }
+
+      for (let lavador of lavadores) {
+        const cardLavador = document.createElement('div');
+        cardLavador.innerHTML = `<div class="washers__profiles">
+          <a class="washers__profiles_see-ratings" href="#">Ver avaliações</a>
+          <img src="./images/profile.png" alt="profile image" />
+          <p class="washers___profiles_name">${lavador.nome}</p>
+
+          <div class="washers__profiles__ratings">
+            <p>${lavador.nota} (${lavador.qtdAvaliacoes} avaliações)</p>
+            <div class="washers__profiles__ratings_price">
+              <p>R$${lavador.valorCobrado}</p>
+            </div>
+          </div>
+
+          <div class="washers__profiles__ratings-washBtn">
+            <a href="#">Ver avaliações</a>
+            <button class="blue-btn wash-btn">Lavar meu Carro</button>
+          </div>
+        </div>`;
+        document.getElementById('washers').appendChild(cardLavador);
+      }
+    </script>
   </body>
 </html>

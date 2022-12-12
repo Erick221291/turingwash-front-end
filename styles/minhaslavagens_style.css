@@ -1,60 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
-
-* {
-  box-sizing: border-box;
-  font-family: 'Inter', sans-serif;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
-#top-header {
-  background: #bcf7ff;
-  height: 5.5rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-#top-header__logo {
-  margin: 2px 15px 11px 20px;
-  width: 100px;
-}
-
-#top-header__nav {
-  display: flex;
-  align-items: center;
-  color: #000;
-  gap: 6rem;
-}
-
-#top-header__nav a {
-  font-size: 20px;
-  font-weight: bold;
-  text-decoration: none;
-  color: #000;
-}
-
-#top-header__nav button {
-  cursor: pointer;
-  margin-right: 2rem;
-  width: 80px;
-  height: 40px;
-  font-size: 20px;
-  font-weight: bold;
-}
-
-.blue-btn {
-  cursor: pointer;
-  background-color: #8ff2ff;
-  border: none;
-  border-radius: 5px;
-}
+@import url('./header.css');
+@import url('./footer.css');
+@import url('./reset-body-blue_btn.css');
+@import url('./hamburger_menu.css');
 
 .container {
   background-color: #eaf7ff;
@@ -70,8 +17,9 @@ body {
   width: 85%;
 }
 
-.container h2 {
+.container h1 {
   margin: 3rem 0 1rem 0;
+  font-size: 1.4rem;
 }
 
 #container__car-distance {
@@ -81,7 +29,7 @@ body {
 }
 
 #my-washes {
-  margin-top: 2rem;
+  margin: 2rem 0;
   width: 85%;
 }
 
@@ -111,7 +59,7 @@ body {
   position: absolute;
   width: 75px;
   height: 35px;
-  padding: 7px 10px 5px 12px;
+  padding: 9px 10px 5px 12px;
   top: 0;
   right: 0;
 }
@@ -120,58 +68,4 @@ body {
   position: absolute;
   bottom: 10px;
   right: 10px;
-}
-
-#bottom-footer {
-  background: #bcf7ff;
-  margin-top: auto;
-  height: 12rem;
-  font-size: 14px;
-  display: flex;
-  justify-content: space-between;
-  padding: 1rem;
-}
-
-#bottom-footer__logo img {
-  margin: 5px 0 0 1rem;
-  height: 4rem;
-}
-
-#bottom-footer__links {
-  margin: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  line-height: 1.5rem;
-}
-
-#bottom-footer__links a {
-  color: #000;
-  text-decoration: none;
-}
-
-#bottom-footer__copyright {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  justify-content: flex-end;
-  line-height: 3px;
-}
-
-#bottom-footer__copyright img {
-  width: 22px;
-  margin-right: 8px;
-}
-
-#bottom-footer__copyright__instagram {
-  display: flex;
-  align-items: center;
-}
-
-#bottom-footer__copyright__instagram_phrase {
-  font-size: 1rem;
-}
-
-#bottom-footer__copyright_phrase {
-  margin-top: 12px;
-  font-size: 12px;
 }

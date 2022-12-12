@@ -5,11 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="https://ituring.com.br/favicon.ico" />
+    <link rel="stylesheet" href="./styles/reset.css" />
     <link rel="stylesheet" href="./styles/adicionarcarro_style.css" />
     <title>Turing Wash - Adicionar Carro</title>
   </head>
   <body>
     <header id="top-header">
+      <nav role="navigation">
+        <div id="menuToggle">
+          <input type="checkbox" />
+
+          <span></span>
+          <span></span>
+          <span></span>
+
+          <ul id="menu">
+            <a href="./meuscarros.html"><li>Meus carros</li></a>
+            <a href="./minhaslavagens.html"><li>Minhas lavagens</li></a>
+            <button class="top-header__nav_btn blue-btn">Sair</button>
+          </ul>
+        </div>
+      </nav>
       <img
         id="top-header__logo"
         src="./images/turingwash-logo.svg"
@@ -18,12 +34,12 @@
       <nav id="top-header__nav">
         <a href="./meuscarros.html">Meus carros</a>
         <a href="./minhaslavagens.html">Minhas lavagens</a>
-        <button class="blue-btn">Sair</button>
+        <button class="top-header__nav_btn blue-btn">Sair</button>
       </nav>
     </header>
 
     <div class="container">
-      <h2>Adicionar carro</h2>
+      <h1>Adicionar carro</h1>
 
       <div id="add-car__form">
         <label for="manufacturer" class="add-car__form__label"
@@ -69,5 +85,14 @@
         </p>
       </div>
     </footer>
+    <script src="./scripts/usuario.js"></script>
+    <script>
+      if (!usuario.logado) {
+        const loginBtn = document.getElementsByClassName('top-header__nav_btn');
+        for (let btn of loginBtn) {
+          btn.innerText = 'Entrar';
+        }
+      }
+    </script>
   </body>
 </html>
